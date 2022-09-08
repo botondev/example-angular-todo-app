@@ -1,0 +1,20 @@
+
+<h1>TODO APP</h1>
+<input id="newTodo" type="text" [formControl]="newTodo" (keyup.enter)="onTodoSubmit()">
+<button (click)="onTodoSubmit()">SUBMIT</button>
+
+<div>
+  <h2>TODOs</h2>
+  <ul>
+    <li *ngFor="let todo of unfinishedTodos">
+      <label for="todo-{{todo.id}}">{{todo.description}}</label>
+      <input type="checkbox" [value]="todo.id" id="todo-{{todo.id}}" (click)="finishTodo(todo)">
+    </li>
+  </ul>
+  <h2>FINISHED TODOs</h2>
+  <ul>
+    <li *ngFor="let todo of finishedTodos">
+      ✓ <label for="todo-{{todo.id}}" style="text-decoration:line-through">{{todo.description}}</label>
+    </li>
+  </ul>
+</div>
