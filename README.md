@@ -1,2 +1,2 @@
-# example-react-todo-app
-This app is a simple example app written in react js
+# example-angular-todo-app
+This app is a simple example app written in angular js
